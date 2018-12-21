@@ -2,39 +2,39 @@
 /* Generic Selectors */
 body {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 20px;
-	color: #333333;
-	background-color: #F9F9F9;
+	font-size: 29px;
+	color: #330003;
+	background-color: #e0e0e0;
 }
 
 p {
 	width: 80%;
-    color: #00CC00;
+    color: #0900cc;
 }
 
 h1 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 18px;
 	font-weight: bold;
-	color: #00CC00;
+	color: #060024;
 }
 
 h2 {
 	font-family: Georgia, "Times New Roman", Times, serif;
 	font-size: 16px;
-	color: #000000;
+	color: #636363;
 	border-bottom: 1px solid #C6EC8C;
 }
 
 /**************** Pseudo classes ****************/
 a:link {
-	color: #00CC00;
+	color: #cc0016;
 	text-decoration: underline;
 	font-weight: bold;
 }
 
 li a:link {
-	color: #00CC00;
+	color: #cc000d;
 	text-decoration: none;
 	font-weight: bold;
 }
@@ -46,7 +46,7 @@ a:visited {
 }
 
 li a:visited {
-	color: #00CC00;
+	color: #c00dcc;
 	text-decoration: none;
 	font-weight: bold;
 }
