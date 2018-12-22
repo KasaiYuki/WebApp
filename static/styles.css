@@ -10,11 +10,12 @@ body {
 p {
 	width: 80%;
     color: #0900cc;
+	font-size: 18px;
 }
 
 h1 {
 	font-family: Georgia, "Times New Roman", Times, serif;
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: bold;
 	color: #060024;
 }
