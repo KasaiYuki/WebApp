@@ -2,22 +2,29 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"  type="text/css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
     <title>Home Screen</title>
 </head>
 <body>
-    <div id = "Heading">
-        <h1> Welcome to My Website!</h1>
-        <h2> By Sir Stripes</h2>
-    </div>
-    <div id = "Body">
-        <h1> Here we have study guides, and calculators to help you out!</h1>
-        <p> <b> <i> <u> Links: </u></i></b></p>
+<div id="Heading">
+    <h1> <span class="title"> Welcome to My Website!</span></h1>
+    <h2> <span class="subtitle"> By Sir Stripes</span></h2>
+</div>
+<div id="Body">
+    <h1> Here we have study guides, and calculators to help you out!</h1>
+    <div id="Guides">
+        <h1><b> <u> Guides: </u></b></h1>
         <ul>
-            <li> <a href="addprofileform">Add Profile One</a></li>
-            <li> <a href="addprofileform2"> Add Profile Two </a></li>
-            <li> <a href="wolframAsk"> Wolfram</a> </li>
+            <li><a href="addprofileform">Add Profile One</a></li>
         </ul>
     </div>
+    <div id="Calculators">
+        <h1><b> <u> Calculators: </u></b></h1>
+        <ul>
+            <li><a href="wolframAsk"> Wolfram</a></li>
+            <li><a href="phalculator"> Phalculator(Physics Calculator)</a></li>
+        </ul>
+    </div>
+</div>
 </body>
 </html>

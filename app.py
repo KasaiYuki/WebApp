@@ -18,6 +18,10 @@ def wolframAsk():
 def wolfram():
     response = WolframAlpha.getResponse(request.args.get('response'))
     return(render_template('wolfram.html', html_response = response))
+
+@app.route('/phalculator')
+def phalculator():
+    return(render_template('phalculator.html'))
 #mapping for /hello
 @app.route('/hello')
 def hello():
