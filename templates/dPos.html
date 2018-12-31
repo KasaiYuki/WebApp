@@ -7,14 +7,21 @@
 
 </head>
 <body>
-<form action="" method="get">
-    Time: <input type="text" , name="time">
+<form action="/dPosA" method="post">
+    Time: <input type="number" name="time">
     <br/>
-    Acceleration: <input type="text" name="accel">
+    Acceleration: <input type="number" name="accel">
     <br/>
-    Initial Velocity: <input type="text" name="ivel">
+    Initial Velocity: <input type="number" name="iVel">
     <br/>
-    <input type="submit" value="Submit">
+    <input type="submit" name="form" value="Submit">
+
+    <p id="a" style="font-size:150%;text-align: center"></p>
 </form>
+<script>
+    if({{ filled }}){
+        document.getElementById("a").innerHTML = {{answer}} + "m";
+    }
+</script>
 </body>
 </html>

@@ -1,9 +1,10 @@
 from flask import Flask, render_template, request
+import phalculator
 import WolframAlpha
-
+#from flask_bootstrap import Bootstrap
 
 app = Flask(__name__)
-
+#bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
@@ -19,13 +20,22 @@ def wolfram():
     response = WolframAlpha.getResponse(request.args.get('response'))
     return(render_template('wolfram.html', html_response = response))
 
-@app.route('/phalculator')
-def phalculator():
+@app.route('/phalculatorAsk')
+def phalculatorAsk():
     return(render_template('phalculatorAsk.html'))
 
-@app.route('/dPos')
+
+@app.route('/dPos', methods=['GET'])
 def dPos():
     return(render_template('dPos.html'))
+
+
+@app.route('/dPosA', methods=['GET', 'POST'])
+def dPosA():
+    time = int(request.form['time'])
+    accel = int(request.form['accel'])
+    iVel = int(request.form['iVel'])
+    return(render_template('dPos.html', filled = 'true', answer = phalculator.dPos(time, accel, iVel)))
 
 #mapping for myprofile
 @app.route('/addprofileform')
