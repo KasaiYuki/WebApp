@@ -1,9 +1,10 @@
 /* Generic Selectors */
 body {
     font-family: Georgia, "Times New Roman", Times, serif;
-    font-size: 29px;
+    font-size: 28px;
     color: #330003;
-    background-color: #e0e0e0;
+    text-align: center;
+    line-height: 46px;
 }
 
 p {

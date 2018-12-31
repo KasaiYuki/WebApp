@@ -21,18 +21,11 @@ def wolfram():
 
 @app.route('/phalculator')
 def phalculator():
-    return(render_template('phalculator.html'))
-#mapping for /hello
-@app.route('/hello')
-def hello():
-    myName = "Shreyas"
-    return ("Hello " + myName)
+    return(render_template('phalculatorAsk.html'))
 
-#mapping for myprofile
-@app.route('/myprofile')
-def showMyProfile():
-    return render_template('MyProfile.html')
-
+@app.route('/dPos')
+def dPos():
+    return(render_template('dPos.html'))
 
 #mapping for myprofile
 @app.route('/addprofileform')
@@ -44,10 +37,7 @@ def addprofileform():
 #mapping for /addprofile
 @app.route('/addprofile')
 def addprofile():
-    myName = request.args.get('myname') #name parameter in MyProfileForm
-    state_of_residence = request.args.get('state_of_residence')
-    favorite_subject = request.args.get('favorite_subject')
-    return render_template('MyProfile.html', html_myname = myName, html_state_of_residence = state_of_residence, html_fav_subject = favorite_subject)
+    return render_template('MyProfile.html', html_myname = request.args.get('myname'), html_state_of_residence = request.args.get('state_of_residence'), html_fav_subject = request.args.get('favorite_subject'))
 
 if __name__ == '__main__':
     app.run()
