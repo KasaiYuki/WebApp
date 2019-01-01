@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request
-import phalculator
 import WolframAlpha
 #from flask_bootstrap import Bootstrap
 
@@ -25,17 +24,17 @@ def phalculatorAsk():
     return(render_template('phalculatorAsk.html'))
 
 
-@app.route('/dPos', methods=['GET'])
+@app.route('/dPos', methods=['GET', 'POS'])
 def dPos():
     return(render_template('dPos.html'))
 
 
-@app.route('/dPos', methods=['GET', 'POST'])
-def dPosA():
-    time = int(request.form['time'])
-    accel = int(request.form['accel'])
-    iVel = int(request.form['iVel'])
-    return(render_template('dPos.html', filled = 'true', answer = phalculator.dPos(time, accel, iVel)))
+# @app.route('/dPos', methods=['GET', 'POST'])
+# def dPosA():
+#     time = int(request.form['time'])
+#     accel = int(request.form['accel'])
+#     iVel = int(request.form['iVel'])
+#     return(render_template('dPos.html', filled = 'true', answer = phalculator.dPos(time, accel, iVel)))
 
 #mapping for myprofile
 @app.route('/addprofileform')

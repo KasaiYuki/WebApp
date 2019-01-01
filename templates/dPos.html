@@ -7,7 +7,7 @@
 
 </head>
 <body>
-<form action="/dPos" method="post">
+<form method="post">
     Time: <input type="number" name="time">
     <br/>
     Acceleration: <input type="number" name="accel">
@@ -15,12 +15,20 @@
     Initial Velocity: <input type="number" name="iVel">
     <br/>
     <input type="submit" name="form" value="Submit">
+    <button onclick="dPos(time, accel, iVel)"> Submit1 </button>
 
     <p id="a" style="font-size:150%;text-align: center"></p>
 </form>
+<!--<script>
+    if({ filled }}){
+        document.getElementById("a").innerHTML = {answer}} + "m";
+    }
+</script>-->
 <script>
-    if({{ filled }}){
-        document.getElementById("a").innerHTML = {{answer}} + "m";
+    function dPos(t,a, vx0)
+    {
+        var ans = (vx0 * t) + (0.5 * a * Math.pow(t,2));
+        document.getElementById("a").innerHTML = ans;
     }
 </script>
 </body>
