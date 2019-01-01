@@ -30,7 +30,7 @@ def dPos():
     return(render_template('dPos.html'))
 
 
-@app.route('/dPosA', methods=['GET', 'POST'])
+@app.route('/dPos', methods=['GET', 'POST'])
 def dPosA():
     time = int(request.form['time'])
     accel = int(request.form['accel'])

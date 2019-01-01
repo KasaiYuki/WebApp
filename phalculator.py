@@ -1,6 +1,6 @@
 import math
 def dPos(t, a, vx0):
-    changeInPos = (vx0 * t) + (0.5 * a * t ** 2)
+    changeInPos = (vx0 * t) + (0.5 * a * (t ** 2))
     return changeInPos
 
 
