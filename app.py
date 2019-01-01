@@ -1,10 +1,9 @@
 from flask import Flask, render_template, request
 import phalculator
 import WolframAlpha
-#from flask_bootstrap import Bootstrap
+
 
 app = Flask(__name__)
-#bootstrap = Bootstrap(app)
 
 @app.route('/')
 def index():
@@ -48,6 +47,10 @@ def addprofileform():
 @app.route('/addprofile')
 def addprofile():
     return render_template('MyProfile.html', html_myname = request.args.get('myname'), html_state_of_residence = request.args.get('state_of_residence'), html_fav_subject = request.args.get('favorite_subject'))
+
+@app.route('/calcguide')
+def calcguide():
+    return(render_template('calcguide.html'))
 
 if __name__ == '__main__':
     app.run()
