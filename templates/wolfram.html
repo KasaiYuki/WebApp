@@ -1,16 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Wolfram Give Answer</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"  type="text/css">
-</head>
-<body>
+{% extends "navbar.html" %}
+{% block title %}Wolfram Response{% endblock %}
+
+{% block content %}
     <div id="Heading">
         <h1> Answer. </h1>
     </div>
-    <div id="Answer"></div>
+    <div id="Answer">
         <p> {{ html_response }}</p>
     </div>
-</body>
-</html>
+{% endblock %}

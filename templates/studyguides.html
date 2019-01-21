@@ -1,16 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Study Guides</title>
-    {#    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">#}
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-</head>
-<body>
+{% extends "navbar.html" %}
+{% block title %}Study Guides{% endblock %}
 
+{% block content %}
 <div class="container">
     <br>
     <div class="list-group">
@@ -18,5 +9,4 @@
         <h1 class="list-group-item"><a href="https://tinyurl.com/ap-physics-motion"> Straight Up Physics</a></h1>
     </div>
 </div>
-</body>
-</html>
+{% endblock %}

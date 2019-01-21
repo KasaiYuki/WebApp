@@ -1,19 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Wolfram Ask Question</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"  type="text/css">
-</head>
-<body>
+{% extends "navbar.html" %}
+{% block title %}Wolfram Ask Question{% endblock %}
+
+{% block content %}
     <div id="Heading">
         <h1> Ask a Question. </h1>
     </div>
-    <div id="Response"></div>
+    <div id="Response">
         <form action="/wolfram" method="get">
             Question: <input type="text" name="response">
             <input type="submit" value="Submit">
         </form>
     </div>
-</body>
-</html>
+{% endblock %}
