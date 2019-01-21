@@ -4,24 +4,31 @@
     <meta charset="UTF-8">
     <title>Title</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" type="text/css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-<form action="/dPos" method="post">
-    Time: <input type="number" name="time">
-    <br/>
-    Acceleration: <input type="number" name="accel">
-    <br/>
-    Initial Velocity: <input type="number" name="iVel">
-    <br/>
-    <input type="submit" name="form" value="Submit">
 
-    <p id="a" style="font-size:150%;text-align: center"></p>
-</form>
-<script>
-    if({{ filled }}){
-        document.getElementById("a").innerHTML = {{answer}} + "m";
-    }
-</script>
+<div class="container">
+    <br>
+    <form class="form-horizontal" action="/dPos" method="post">
+        <div class="form-group"> Time: <input type="number" name="time" placeholder="time"></div>
+        <br/>
+        <div class="form-group"> Acceleration: <input type="number" name="accel" placeholder="acceleration"></div>
+        <br/>
+        <div class="form-group"> Initial Velocity: <input type="number" name="iVel" placeholder="initial velocity"></div>
+        <br/>
+        <div class="form-group"><input type="submit" name="form" value="Submit"></div>
+        <p id="a" style="font-size:150%;text-align: center"></p>
+    </form>
+    <script>
+        if ({{ filled }}) {
+            document.getElementById("a").innerHTML = {{answer}} +"m";
+        }
+    </script>
+
+</div>
 </body>
 </html>

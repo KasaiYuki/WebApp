@@ -3,17 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <title>Phalculator</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"  type="text/css">
-
+{#    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}"  type="text/css">#}
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <div id="Choices">
-        <ol type="1">
-            <li><a href="dPos"> Change in Position</a></li>
-            <li> Final Velocity</li>
-            <li> Split vector in to Components</li>
-            <li> Combine Components</li>
-        </ol>
+
+<div class="container">
+    <br>
+    <div class="list-group">
+            <a><a href="dPos" class="list-group-item"> Change in Position</a></a>
+            <a class="list-group-item"> Final Velocity</a>
+            <a class="list-group-item"> Split vector in to Components</a>
+            <a class="list-group-item"> Combine Components</a>
     </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/jquery-1.11.3.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+ </div>
 </body>
 </html>

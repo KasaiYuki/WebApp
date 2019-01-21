@@ -48,9 +48,9 @@ def addprofileform():
 def addprofile():
     return render_template('MyProfile.html', html_myname = request.args.get('myname'), html_state_of_residence = request.args.get('state_of_residence'), html_fav_subject = request.args.get('favorite_subject'))
 
-@app.route('/calcguide')
-def calcguide():
-    return(render_template('calcguide.html'))
+@app.route('/studyguides')
+def studyguides():
+    return(render_template('studyguides.html'))
 
 if __name__ == '__main__':
     app.run()
