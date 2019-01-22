@@ -1,0 +1,29 @@
+{% extends "navbar.html" %}
+{% block title %}Final Velocity{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>Final Velocity</h1>
+        <br>
+        <form class="form-horizontal" action="/fVel" method="post">
+            <div class="form-group"> Initial Velocity: <input type="number" name="iVel" placeholder="initial velocity">
+            </div>
+            <br/>
+            <div class="form-group"> Acceleration: <input type="number" name="accel" placeholder="acceleration"></div>
+            <br/>
+            <div class="form-group"> Initial Position: <input type="number" name="iPos" placeholder="initial position"> </div>
+            <br/>
+            <div class="form-group"> Final Position:  <input type="number" name="fPos" placeholder="final position"></div>
+            <br/>
+            <div class="form-group"><input type="submit" name="form" value="Submit"></div>
+            <p id="a" style="font-size:200%;text-align: center"></p>
+        </form>
+        <script>
+            if ({{ filled }}) {
+                document.getElementById("a").innerHTML = {{answer}} +" m/s";
+            }
+        </script>
+
+    </div>
+{% endblock %}

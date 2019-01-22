@@ -1,0 +1,28 @@
+{% extends "navbar.html" %}
+{% block title %}Combine Components{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>Combine Components</h1>
+        <br>
+        <form class="form-horizontal" action="/combineComp" method="post">
+            <div class="form-group"> Vertical Component: <input type="number" name="vComp" placeholder="vertical component">
+            </div>
+            <br/>
+            <div class="form-group"> Horizontal Component: <input type="number" name="hComp" placeholder="horizontal component"></div>
+            <br/>
+            <div class="form-group"><input type="submit" name="form" value="Submit"></div>
+            <p id="a" style="font-size:200%;text-align: center"></p>
+            <p id="a2" style="font-size:200%;text-align: center"></p>
+        </form>
+        <script>
+            if ({{ filled }}) {
+                document.getElementById("a").innerHTML = "Magnitude: " + {{ answer1 }} + ' m/s';
+                document.getElementById("a2").innerHTML = 'Angle: ' + {{ answer2 }} + " degrees";
+            }
+        </script>
+
+    </div>
+{% endblock %}

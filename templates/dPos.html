@@ -4,6 +4,8 @@
 {% block content %}
 <div class="container">
     <br>
+    <h1>Change in Positon</h1>
+    <br>
     <form class="form-horizontal" action="/dPos" method="post">
         <div class="form-group"> Time: <input type="number" name="time" placeholder="time"></div>
         <br/>
@@ -12,11 +14,11 @@
         <div class="form-group"> Initial Velocity: <input type="number" name="iVel" placeholder="initial velocity"></div>
         <br/>
         <div class="form-group"><input type="submit" name="form" value="Submit"></div>
-        <p id="a" style="font-size:150%;text-align: center"></p>
+        <p id="a" style="font-size:200%;text-align: center"></p>
     </form>
     <script>
         if ({{ filled }}) {
-            document.getElementById("a").innerHTML = {{answer}} +"m";
+            document.getElementById("a").innerHTML = {{answer}} +" m";
         }
     </script>
 

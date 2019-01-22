@@ -1,0 +1,28 @@
+{% extends "navbar.html" %}
+{% block title %}Split Vector{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <br>
+        <h1>Split Vector</h1>
+        <br>
+        <form class="form-horizontal" action="/splitVector" method="post">
+            <div class="form-group"> Magnitude: <input type="number" name="mag" placeholder="magnitude">
+            </div>
+            <br/>
+            <div class="form-group"> Angle: <input type="number" name="angle" step="0.01" placeholder="angle"></div>
+            <br/>
+            <div class="form-group"><input type="submit" name="form" value="Submit"></div>
+            <p id="a" style="font-size:200%;text-align: center"></p>
+            <p id="a2" style="font-size:200%;text-align: center"></p>
+        </form>
+        <script>
+            if ({{ filled }}) {
+                document.getElementById("a").innerHTML = "Horizontal Component: " + {{ answer1 }} + ' m/s';
+                document.getElementById("a2").innerHTML = 'Vertical Component: ' + {{ answer2 }} + " m/s";
+            }
+        </script>
+
+    </div>
+{% endblock %}

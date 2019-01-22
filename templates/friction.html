@@ -1,0 +1,33 @@
+{% extends "navbar.html" %}
+{% block title %}Friction{% endblock %}
+
+
+{% block content %}
+    <div class="container">
+        <br>
+        <h1> Force of Friction</h1>
+        <br>
+        <form class="form-horizontal" action="/friction" method="post">
+            <div class="form-group"> Coefficient of Friction: <input name="coef" step="0.01"
+                                                                     placeholder="coefficient of fricton">
+            </div>
+            <br/>
+            <div class="form-group"> Mass: <input type="number" step="0.01" name="mass" placeholder="mass"></div>
+            <br/>
+            <p>OPTIONAL-Change in gravitational force due to an incline(type 0 if no incline)</p>
+            <br>
+            <div class="form-group"> Angle <input type="number" step="0.01" name="angle" placeholder="angle"></div>
+            <br/>
+            <div class="form-group"> Incline Type(l,r,s-none) <input type="text" name="inc" placeholder="incline type"></div>
+            <br>
+            <div class="form-group"><input type="submit" name="form" value="Submit"></div>
+            <p id="a" style="font-size:200%;text-align: center"></p>
+        </form>
+        <script>
+            if ({{ filled }}) {
+                document.getElementById("a").innerHTML = {{answer}} + " N";
+            }
+        </script>
+
+    </div>
+{% endblock %}
